@@ -1,0 +1,127 @@
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 2
+model name	: AMD Phenom(tm) 9950 Quad-Core Processor
+stepping	: 3
+microcode	: 0x1000065
+cpu MHz		: 2600.000
+
+
+Run 1
+C++, BitString, 16, 0.422403
+C++, BitString, 32, 0.426266
+C++, BitString, 64, 0.425221
+C++, BitString, 128, 0.41582
+C++, BitString, 256, 0.415288
+C++, BitString, 512, 0.415195
+C++, BitString, 1024, 0.425319
+C++, BitString, 2048, 0.463571
+C++, BitString, 4096, 0.426933
+C++, BitString, 8192, 0.442776
+C++, BitString, 16384, 0.545644
+C++, BitString, 32768, 0.470763
+Run 2
+C++, BitString, 16, 0.42545
+C++, BitString, 32, 0.424554
+C++, BitString, 64, 0.425207
+C++, BitString, 128, 0.425253
+C++, BitString, 256, 0.43281
+C++, BitString, 512, 0.425186
+C++, BitString, 1024, 0.503575
+C++, BitString, 2048, 0.524728
+C++, BitString, 4096, 0.433815
+C++, BitString, 8192, 0.461325
+C++, BitString, 16384, 0.442974
+C++, BitString, 32768, 0.41784
+Run 3
+C++, BitString, 16, 0.433699
+C++, BitString, 32, 0.41818
+C++, BitString, 64, 0.417731
+C++, BitString, 128, 0.423826
+C++, BitString, 256, 0.417037
+C++, BitString, 512, 0.414883
+C++, BitString, 1024, 0.414045
+C++, BitString, 2048, 0.415637
+C++, BitString, 4096, 0.415397
+C++, BitString, 8192, 0.439671
+C++, BitString, 16384, 0.414533
+C++, BitString, 32768, 0.414182
+Run 4
+C++, BitString, 16, 0.427966
+C++, BitString, 32, 0.417014
+C++, BitString, 64, 0.427606
+C++, BitString, 128, 0.418395
+C++, BitString, 256, 0.415571
+C++, BitString, 512, 0.42391
+C++, BitString, 1024, 0.414643
+C++, BitString, 2048, 0.415433
+C++, BitString, 4096, 0.41561
+C++, BitString, 8192, 0.448822
+C++, BitString, 16384, 0.414323
+C++, BitString, 32768, 0.413535
+Run 5
+C++, BitString, 16, 0.431356
+C++, BitString, 32, 0.422213
+C++, BitString, 64, 0.453095
+C++, BitString, 128, 0.442767
+C++, BitString, 256, 0.416202
+C++, BitString, 512, 0.416497
+C++, BitString, 1024, 0.415827
+C++, BitString, 2048, 0.533891
+C++, BitString, 4096, 0.485458
+C++, BitString, 8192, 0.467747
+C++, BitString, 16384, 0.436501
+C++, BitString, 32768, 0.433313
+Run 6
+C++, BitString, 16, 0.43462
+C++, BitString, 32, 0.43068
+C++, BitString, 64, 0.446834
+C++, BitString, 128, 0.472723
+C++, BitString, 256, 0.583846
+C++, BitString, 512, 0.474598
+C++, BitString, 1024, 0.464281
+C++, BitString, 2048, 0.460874
+C++, BitString, 4096, 0.443425
+C++, BitString, 8192, 0.488871
+C++, BitString, 16384, 0.4848
+C++, BitString, 32768, 0.49677
+Run 7
+C++, BitString, 16, 0.420075
+C++, BitString, 32, 0.425139
+C++, BitString, 64, 0.417339
+C++, BitString, 128, 0.419743
+C++, BitString, 256, 0.451052
+C++, BitString, 512, 0.41646
+C++, BitString, 1024, 0.416267
+C++, BitString, 2048, 0.415423
+C++, BitString, 4096, 0.417387
+C++, BitString, 8192, 0.416089
+C++, BitString, 16384, 0.420611
+C++, BitString, 32768, 0.415052
+Run 8
+C++, BitString, 16, 0.424497
+C++, BitString, 32, 0.431792
+C++, BitString, 64, 0.417478
+C++, BitString, 128, 0.420452
+C++, BitString, 256, 0.438455
+C++, BitString, 512, 0.420922
+C++, BitString, 1024, 0.436456
+C++, BitString, 2048, 0.429361
+C++, BitString, 4096, 0.415332
+C++, BitString, 8192, 0.425735
+C++, BitString, 16384, 0.417436
+C++, BitString, 32768, 0.415156
+Run 9
+C++, BitString, 16, 0.439319
+C++, BitString, 32, 0.425214
+C++, BitString, 64, 0.424764
+C++, BitString, 128, 0.414197
+C++, BitString, 256, 0.415287
+C++, BitString, 512, 0.415188
+C++, BitString, 1024, 0.448265
+C++, BitString, 2048, 0.414959
+C++, BitString, 4096, 0.415156
+C++, BitString, 8192, 0.424753
+C++, BitString, 16384, 0.415578
+C++, BitString, 32768, 0.414262
