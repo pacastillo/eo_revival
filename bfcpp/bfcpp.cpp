@@ -17,11 +17,12 @@ int main() {
   EOBitFlip<float> bitflip;
 
   unsigned length = 16;
-  unsigned iterations = 1000000;
+  unsigned iterations = 100000;
   unsigned top_length = 32768;
   do {
-    Chrom chrom("", length, 1); chrom.initialize();
-    cout << "C++, BitString, " << length << ", ";
+    Chrom chrom("", length, 1); 
+    chrom.initialize();
+    cout << "C++-BitString, " << length << ", ";
 
     struct timeval t1, t2;
     double elapsedTime;
