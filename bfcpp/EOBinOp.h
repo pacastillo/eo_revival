@@ -39,8 +39,8 @@ template<class fitness = float> class EOBitFlip: public MonOp< EOBin<fitness> >
   ///
   void operator()( Chrom& chrom ) const
     {
-      int myseed = time(NULL);
-      std::default_random_engine rng(myseed);
+      std::random_device rd;
+      std::default_random_engine rng(rd());
       std::uniform_int_distribution<int> rng_dist(0, chrom.size() - 1 ) ;
       applyAt( chrom, rng_dist(rng) );
     }
@@ -80,15 +80,15 @@ template<class fitness = float> class EORandom: public MonOp< EOBin<fitness> >
 
   ///
   void applyAt( Chrom& chrom, unsigned bit, unsigned = 0 ) const {
-      int myseed = time(NULL);
-      std::default_random_engine rng(myseed);
+      std::random_device rd;
+      std::default_random_engine rng(rd());
       std::uniform_int_distribution<int> rng_dist(0, 10 ) ;
       
-	if ( rng_dist(rng)%2)
-	chrom[bit] = true;
-      else
-	chrom[bit] = false;
-    }
+	   if ( rng_dist(rng)%2)
+	     chrom[bit] = true;
+     else
+	     chrom[bit] = false;
+  }
 
 };
 
@@ -118,9 +118,9 @@ class EOMutation: public MonOp< EOBin<fitness> >
     }
 
   ///
-  void applyAt( Chrom& chrom, unsigned bit, unsigned = 0 ) const {   
-      int myseed = time(NULL);
-      std::default_random_engine rng(myseed);
+  void applyAt( Chrom& chrom, unsigned bit, unsigned = 0 ) const {
+      std::random_device rd;
+      std::default_random_engine rng(rd());
       std::uniform_int_distribution<int> rng_dist(0, 10 ) ;
       int tmp = (int) (rate * 10.0);
       if (rng_dist(rng) < tmp)

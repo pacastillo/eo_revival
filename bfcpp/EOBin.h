@@ -63,9 +63,10 @@ class EOBin: public EO<bool, fitnessT>, public bit_vector
   
   /// 
   void initialize() {
-    int myseed = time(NULL);
-    std::default_random_engine rng(myseed);
+    std::random_device rd;
+    std::default_random_engine rng(rd());
     std::uniform_int_distribution<int> rng_dist(0, length()-1 ) ;
+
     for ( unsigned j = 0; j < length(); j++ )  {
       unsigned oo = rng_dist(rng);
       //cout << "DEBUG oo="<<oo;
@@ -153,20 +154,10 @@ class EOBinFactory: public EOFactory< EOBin<fitT> >{
   /// One of the factory methods: creates a random EO
   virtual Chrom* make() {
     string thisID= newID();
-    
-    /*
-    Uniform< float > on_off( -1, 1 );
-    EOBin<fitT>* newEO = new EOBin<fitT>( thisID, numGenes, numBits );
-    // Assigns values randomly
-    for ( unsigned j = 0; j < newEO->length(); j++ )  {
-      float oo = on_off( );
-      newEO->writeGene( j, (oo > 0) ? true: false );
-    }
-    */
 
     EOBin<fitT>* newEO = new EOBin<fitT>( thisID, numGenes, numBits );
-    int myseed = time(NULL);
-    std::default_random_engine rng(myseed);
+    std::random_device rd;
+    std::default_random_engine rng(rd());
     std::uniform_int_distribution<int> rng_dist(0, newEO->length()-1 ) ;
     for ( unsigned j = 0; j < newEO->length(); j++ )	{
       unsigned oo = rng_dist(rng);
@@ -198,7 +189,6 @@ private:
 	unsigned long counter;
 	unsigned numGenes;
 	unsigned numBits;
-
 
 	/// Real function: creates a new ID
 	string newID (){
