@@ -14,24 +14,31 @@ typedef EOBin<float> Chrom;
 //-----------------------------------------------------------------------------
 
 int main() {
+  EOUniformCrossover<Chrom> uxover;
 
   unsigned length = 16;
+  unsigned iterations = 100000;
+  unsigned top_length = 32768;
+  do {
+    Chrom chrom0("", length, 1); chrom0.initialize();
+    Chrom chrom1("", length, 1); chrom1.initialize();
 
-  Chrom chrom0("", length, 1); chrom0.initialize();
-  Chrom chrom1("", length, 1); chrom1.initialize();
+    cout << "C++-BitString, " << length << ", ";
 
-  struct timeval t1, t2;
-  gettimeofday(&t1, NULL);
-
-  cout << "Original chroms:  " << chrom0 << "  " << chrom1 << endl;
-  EOUniformCrossover<Chrom> uxover;
-  uxover(chrom0, chrom1);
-  cout << "UniformCrossover: " << chrom0 << "  " << chrom1 << endl;
-
-  gettimeofday(&t2, NULL);
-  double elapsedTime = (t2.tv_sec - t1.tv_sec);      // sec to ms
-  elapsedTime += (t2.tv_usec - t1.tv_usec) / 1e6;   // us to ms
-  cout <<  elapsedTime << endl;
+    struct timeval t1, t2;
+    gettimeofday(&t1, NULL);
+             
+    for (unsigned i = 0; i < iterations; i++ ) {
+      uxover(chrom0, chrom1);
+    }
+    
+    gettimeofday(&t2, NULL);
+    double elapsedTime = (t2.tv_sec - t1.tv_sec);      
+    elapsedTime += (t2.tv_usec - t1.tv_usec) / 1e6;   // us to s
+    cout <<  elapsedTime << endl;
+                
+    length = length * 2 ;
+  } while (length <= top_length);
 
   return 0;
 }
