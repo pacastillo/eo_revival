@@ -4,10 +4,10 @@ CXXFLAGS=-Wall -O4
 
 ###############################################################################
 
-SRC = bfcpp.cpp bxcpp.cpp
-BIN = bfcpp bxcpp
+SRC = bfcpp.cpp bxcpp.cpp bonemax.cpp
+BIN = bfcpp bxcpp bonemax
 
-all: bfcpp bxcpp
+all: bfcpp bxcpp bonemax
 
 ###############################################################################
 
@@ -18,6 +18,8 @@ bfcpp: bfcpp.cpp
 	g++ -Wall -Wno-deprecated -std=c++11 bfcpp.cpp -o bfcpp
 bxcpp: bxcpp.cpp	
 	g++ -Wall -Wno-deprecated -std=c++11 bxcpp.cpp -o bxcpp
+bonemax: bonemax.cpp	
+	g++ -Wall -Wno-deprecated -std=c++11 bonemax.cpp -o bonemax
 
 ###############################################################################
 
