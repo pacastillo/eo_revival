@@ -25,7 +25,6 @@ int main() {
     cout << "C++-BitString, " << length << ", ";
 
     struct timeval t1, t2;
-    double elapsedTime;
     gettimeofday(&t1, NULL);
              
     for (unsigned i = 0; i < iterations; i++ ) {
@@ -33,9 +32,9 @@ int main() {
     }
     
     gettimeofday(&t2, NULL);
-    elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-    elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-    cout << (long long) (elapsedTime*1000000.0) << endl;
+    double elapsedTime = (t2.tv_sec - t1.tv_sec);      
+    elapsedTime += (t2.tv_usec - t1.tv_usec) / 1e6;   // us to s
+    cout <<  elapsedTime << endl;
                 
     length = length * 2 ;
   } while (length <= top_length);

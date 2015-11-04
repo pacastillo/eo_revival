@@ -21,7 +21,6 @@ int main() {
   Chrom chrom1("", length, 1); chrom1.initialize();
 
   struct timeval t1, t2;
-  double elapsedTime;
   gettimeofday(&t1, NULL);
 
   cout << "Original chroms:  " << chrom0 << "  " << chrom1 << endl;
@@ -30,9 +29,9 @@ int main() {
   cout << "UniformCrossover: " << chrom0 << "  " << chrom1 << endl;
 
   gettimeofday(&t2, NULL);
-  elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-  elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-  cout << (long long) elapsedTime*1000000.0 << endl;
+  double elapsedTime = (t2.tv_sec - t1.tv_sec);      // sec to ms
+  elapsedTime += (t2.tv_usec - t1.tv_usec) / 1e6;   // us to ms
+  cout <<  elapsedTime << endl;
 
   return 0;
 }
